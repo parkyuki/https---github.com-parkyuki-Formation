@@ -23,11 +23,11 @@ body {
   padding: 20px;
 }
 
-.App img {
+/* .App img {
   width: 100px;
   filter: invert(21%) sepia(99%) saturate(7416%) hue-rotate(352deg)
     brightness(96%) contrast(111%);
-}
+} */
 
 /* Home */
 .home {
@@ -60,10 +60,17 @@ body {
   height: 20%;
   font-size: 50px;
   color: #f6f6f6ef;
-  margin: 0;
+  margin: 0 1px;
   border-bottom: 5px solid #f6f6f6ef;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-.GroupTeam_team.ko {
+.GroupTeam_team img {
+  width: 70px;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+button {
+  all: unset;
 }

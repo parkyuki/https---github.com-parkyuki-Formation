@@ -9,6 +9,7 @@ import Team from "./pages/Team";
 
 const ko = [
   { type: "country", teamName: "한국", id: "ko" },
+
   { value: "1", position: "gk", name: "김승규" },
   { value: "1", position: "gk", name: "조현우" },
   { value: "2", position: "df", name: "김민재" },
