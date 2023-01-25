@@ -7,6 +7,27 @@ import Edit from "./pages/Edit";
 import New from "./pages/New";
 import Team from "./pages/Team";
 
+const ko = [
+  { type: "country", teamName: "한국", id: "ko" },
+  { value: "1", position: "gk", name: "김승규" },
+  { value: "1", position: "gk", name: "조현우" },
+  { value: "2", position: "df", name: "김민재" },
+  { value: "2", position: "df", name: "김승규" },
+  { value: "3", position: "mf", name: "이강인" },
+  { value: "4", position: "fw", name: "손흥민" },
+];
+const po = [
+  { type: "country", teamName: "포르투갈", id: "po" },
+  { value: "1", position: "gk", name: "김승규" },
+  { value: "1", position: "gk", name: "조현우" },
+  { value: "2", position: "df", name: "김민재" },
+  { value: "2", position: "df", name: "김승규" },
+  { value: "3", position: "mf", name: "이강인" },
+  { value: "4", position: "fw", name: "손흥민" },
+];
+let Group = [];
+Group = ko.concat(po);
+
 const reducer = (state, action) => {
   let newState = [];
   switch (action.type) {
@@ -18,7 +39,7 @@ const reducer = (state, action) => {
       break;
     }
     case "REMOVE": {
-      newState = state.filter((it) => it.id != action.targetId);
+      newState = state.filter((it) => it.id !== action.targetId);
       break;
     }
     case "EDIT": {
@@ -30,19 +51,19 @@ const reducer = (state, action) => {
     default:
       return state;
   }
-  return state;
+  return newState;
 };
 
 export const StateContext = React.createContext();
 export const DispatchContext = React.createContext();
 
 function App() {
-  const [data, dispatch] = useReducer(reducer, []);
+  const [data, dispatch] = useReducer(reducer, Group);
 
   const dataId = useRef(0);
 
   //CREATE
-  const onCreate = (id, name, age, hegiht, position, content) => {
+  const onCreate = (name, age, hegiht, position, content) => {
     dispatch({
       type: "CREATE",
       data: {
@@ -77,11 +98,10 @@ function App() {
 
   return (
     <StateContext.Provider value={data}>
-      <dispatch.Provider value={{ onCreate, onEdit, onEdit }}>
+      <DispatchContext.Provider value={{ onCreate, onEdit, onRemove }}>
         <BrowserRouter>
           <div className="App">
-            <h3>HI</h3>
-            <img src={process.env.PUBLIC_URL + `/assets/Uniform.png`} />
+            {/* <img src={process.env.PUBLIC_URL + `/assets/Uniform.png`} /> */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/new" element={<New />} />
@@ -90,7 +110,7 @@ function App() {
             </Routes>
           </div>
         </BrowserRouter>
-      </dispatch.Provider>
+      </DispatchContext.Provider>
     </StateContext.Provider>
   );
 }
