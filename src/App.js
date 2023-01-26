@@ -10,21 +10,21 @@ import Team from "./pages/Team";
 const ko = [
   { type: "country", teamName: "한국", id: "ko" },
 
-  { value: "1", position: "gk", name: "김승규" },
-  { value: "1", position: "gk", name: "조현우" },
-  { value: "2", position: "df", name: "김민재" },
-  { value: "2", position: "df", name: "김승규" },
-  { value: "3", position: "mf", name: "이강인" },
-  { value: "4", position: "fw", name: "손흥민" },
+  { value: "ko", position: "gk", name: "김승규" },
+  { value: "ko", position: "gk", name: "조현우" },
+  { value: "ko", position: "df", name: "김민재" },
+  { value: "ko", position: "df", name: "김승규" },
+  { value: "ko", position: "mf", name: "이강인" },
+  { value: "ko", position: "fw", name: "손흥민" },
 ];
 const po = [
   { type: "country", teamName: "포르투갈", id: "po" },
-  { value: "1", position: "gk", name: "김승규" },
-  { value: "1", position: "gk", name: "조현우" },
-  { value: "2", position: "df", name: "김민재" },
-  { value: "2", position: "df", name: "김승규" },
-  { value: "3", position: "mf", name: "이강인" },
-  { value: "4", position: "fw", name: "손흥민" },
+  { value: "po", position: "gk", name: "김승규" },
+  { value: "po", position: "gk", name: "조현우" },
+  { value: "po", position: "df", name: "김민재" },
+  { value: "po", position: "df", name: "김승규" },
+  { value: "po", position: "mf", name: "이강인" },
+  { value: "po", position: "fw", name: "손흥민" },
 ];
 let Group = [];
 Group = ko.concat(po);
@@ -106,8 +106,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/new" element={<New />} />
-              <Route path="/edit:id" element={<Edit />} />
-              <Route path="/team:id" element={<Team />} />
+              <Route path="/edit/:id" element={<Edit />} />
+              <Route path="/team/:id" element={<Team />} />
             </Routes>
           </div>
         </BrowserRouter>
