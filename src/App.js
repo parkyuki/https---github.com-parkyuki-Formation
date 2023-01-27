@@ -13,7 +13,7 @@ const ko = [
   { value: "ko", position: "gk", name: "김승규" },
   { value: "ko", position: "gk", name: "조현우" },
   { value: "ko", position: "df", name: "김민재" },
-  { value: "ko", position: "df", name: "김승규" },
+  { value: "ko", position: "df", name: "김영권" },
   { value: "ko", position: "mf", name: "이강인" },
   { value: "ko", position: "fw", name: "손흥민" },
 ];
@@ -102,7 +102,6 @@ function App() {
       <DispatchContext.Provider value={{ onCreate, onEdit, onRemove }}>
         <BrowserRouter>
           <div className="App">
-            {/* <img src={process.env.PUBLIC_URL + `/assets/Uniform.png`} /> */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/new" element={<New />} />

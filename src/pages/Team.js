@@ -9,11 +9,7 @@ const Team = () => {
 
   const List = groupList.filter((it) => it.value === id);
 
-  return (
-    <div>
-      <LineUp List={List} />
-    </div>
-  );
+  return <LineUp List={List} />;
 };
 
 export default Team;

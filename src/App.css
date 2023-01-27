@@ -74,3 +74,87 @@ body {
 button {
   all: unset;
 }
+/* LineUp */
+.lineUp {
+  width: 700px;
+  height: 600px;
+  position: relative;
+}
+.control {
+  display: flex;
+  justify-content: flex-end;
+}
+.starting {
+  width: 700px;
+  height: 550px;
+  display: grid;
+  align-items: end;
+  position: absolute;
+  top: 47%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+.lineUp .field {
+  background-color: #013773;
+  width: 700px;
+  height: 550px;
+  opacity: 0.8;
+}
+.player {
+  display: grid;
+  justify-items: center;
+  position: relative;
+}
+
+.fw {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mf {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.df {
+  display: flex;
+  justify-content: space-evenly;
+}
+.gk {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+img {
+  width: 95px;
+}
+.player img.ko {
+  filter: invert(23%) sepia(79%) saturate(3727%) hue-rotate(345deg)
+    brightness(77%) contrast(129%);
+}
+select {
+  font-family: "Do Hyeon";
+  font-size: 15px;
+}
+.player select {
+  width: 73px;
+  height: 25px;
+  font-size: 15px;
+  letter-spacing: 5px;
+  border-color: #494949;
+  border-radius: 5px;
+  border-width: 2px;
+  outline: 0 none;
+  padding: 1px;
+  position: absolute;
+  top: 83%;
+}
+.control select {
+  width: 73px;
+  height: 25px;
+  border-color: #494949;
+  border-radius: 5px;
+  border-width: 2px;
+  outline: 0 none;
+  padding: 1px;
+}
