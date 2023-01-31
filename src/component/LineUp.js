@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import Header from "./Header";
 
 const formation = [
   { value: "442", name: "4-4-2" },
@@ -104,6 +105,7 @@ const LineUp = ({ List }) => {
   return (
     <div className="lineUp">
       <div className="control">
+        <Header />
         <select
           onChange={(e) => setTactic(e.target.value)}
           value={tactic.value}

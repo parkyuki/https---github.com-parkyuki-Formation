@@ -16,6 +16,12 @@ const ko = [
   { value: "ko", position: "df", name: "김영권" },
   { value: "ko", position: "mf", name: "이강인" },
   { value: "ko", position: "fw", name: "손흥민" },
+  { value: "ko", position: "gk", name: "김승규" },
+  { value: "ko", position: "gk", name: "조현우" },
+  { value: "ko", position: "df", name: "김민재" },
+  { value: "ko", position: "df", name: "김영권" },
+  { value: "ko", position: "mf", name: "이강인" },
+  { value: "ko", position: "fw", name: "손흥민" },
 ];
 const po = [
   { type: "country", teamName: "포르투갈", id: "po" },

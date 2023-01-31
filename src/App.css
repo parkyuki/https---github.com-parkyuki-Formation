@@ -54,6 +54,9 @@ body {
   justify-content: space-evenly;
   align-content: space-around;
 }
+button {
+  all: unset;
+}
 .GroupTeam_team {
   display: flex;
   width: 25%;
@@ -71,8 +74,14 @@ body {
   border: 1px solid black;
   margin-right: 10px;
 }
-button {
-  all: unset;
+/* Team */
+.Team {
+  display: flex;
+  justify-content: space-evenly;
+  height: 700px;
+}
+.Team_ko {
+  background: linear-gradient(180deg, #c31010cf, #030232ad);
 }
 /* LineUp */
 .lineUp {
@@ -82,15 +91,16 @@ button {
 }
 .control {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .starting {
-  width: 700px;
-  height: 550px;
+  width: 712px;
+  height: 520px;
   display: grid;
   align-items: end;
   position: absolute;
-  top: 47%;
+  top: 63%;
   left: 51%;
   transform: translate(-50%, -50%);
 }
@@ -157,4 +167,98 @@ select {
   border-width: 2px;
   outline: 0 none;
   padding: 1px;
+}
+.starting option {
+  text-align: center;
+  letter-spacing: 11px;
+  font-size: 15px;
+  padding: 0;
+}
+
+/* PlayerList */
+.PlayerList {
+  width: 400px;
+  margin: 10px 7px;
+}
+.PlayerList .country {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 13px auto 0;
+  border-bottom: 2px solid;
+  padding-bottom: 13px;
+}
+.TeamFlag {
+  border: 3px solid black;
+  margin-right: 45px;
+  width: 110px;
+}
+.country .edit {
+  font-size: 17px;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  margin-right: 6px;
+  background-color: #33a94e;
+  border-radius: 8px;
+}
+.country .remove {
+  font-size: 17px;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  margin-right: 6px;
+  background-color: #858383;
+  border-radius: 8px;
+}
+.country .remove:hover {
+  background-color: #d80009;
+}
+.Squad {
+  display: flex;
+  height: 72px;
+  align-items: center;
+  border: 1px solid;
+  background-color: #b3b3b3;
+}
+.Squad:hover {
+  cursor: pointer;
+}
+.Squad_container {
+  overflow-y: scroll;
+  max-height: 550px;
+}
+.Squad_Player_img {
+  width: 55px;
+  height: 55px;
+}
+/* Header */
+.Header {
+  color: #f6f6f6ef;
+  font-size: 33px;
+  margin: 7px 0 17px 10px;
+}
+.Header:hover {
+  cursor: pointer;
+}
+.header_qatar {
+  font-family: "Hahmlet", serif;
+}
+.Modal {
+  width: 300px;
+  height: 200px;
+
+  z-index: 999;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: gray;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.modl_cloase {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
